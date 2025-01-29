@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, Home } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
           
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
-              Home
+              <Home className="h-5 w-5" />
             </a>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
               Workforce Insights
@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="sm:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">
-              Home
+              <Home className="h-5 w-5" />
             </a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">
               Workforce Insights

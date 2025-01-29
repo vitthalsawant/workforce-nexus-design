@@ -1,4 +1,4 @@
-import { Menu, Home } from "lucide-react";
+import { Menu, Home, Services, Book, Users } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -19,10 +19,19 @@ const Navbar = () => {
               <Home className="h-5 w-5" />
             </a>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
-              Workforce Insights
+              <Services className="h-5 w-5 mr-2" />
+              Services
             </a>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
-              Workforce Main
+              Resources
+            </a>
+            <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
+              <Book className="h-5 w-5 mr-2" />
+              Blog
+            </a>
+            <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
+              <Users className="h-5 w-5 mr-2" />
+              About Us
             </a>
           </div>
 
@@ -43,11 +52,20 @@ const Navbar = () => {
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">
               <Home className="h-5 w-5" />
             </a>
-            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">
-              Workforce Insights
+            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary flex items-center">
+              <Services className="h-5 w-5 mr-2" />
+              Services
             </a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">
-              Workforce Main
+              Resources
+            </a>
+            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary flex items-center">
+              <Book className="h-5 w-5 mr-2" />
+              Blog
+            </a>
+            <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary flex items-center">
+              <Users className="h-5 w-5 mr-2" />
+              About Us
             </a>
           </div>
         </div>

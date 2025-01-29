@@ -1,4 +1,4 @@
-import { Menu, Home, Services, Book, Users } from "lucide-react";
+import { Menu, Home, LayoutGrid, Book, Users } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
               <Home className="h-5 w-5" />
             </a>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
-              <Services className="h-5 w-5 mr-2" />
+              <LayoutGrid className="h-5 w-5 mr-2" />
               Services
             </a>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
@@ -53,7 +53,7 @@ const Navbar = () => {
               <Home className="h-5 w-5" />
             </a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary flex items-center">
-              <Services className="h-5 w-5 mr-2" />
+              <LayoutGrid className="h-5 w-5 mr-2" />
               Services
             </a>
             <a href="#" className="block px-3 py-2 rounded-md text-base font-medium text-secondary-dark hover:text-primary">

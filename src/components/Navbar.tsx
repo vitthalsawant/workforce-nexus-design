@@ -17,18 +17,15 @@ const Navbar = () => {
           <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
             <div className="flex flex-col items-center">
               <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
-                <Home className="h-5 w-5" />
+                <Home className="h-5 w-5" />Home
               </a>
-              <span className="text-xs text-secondary-dark">Home</span>
+              
             </div>
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
               <LayoutGrid className="h-5 w-5 mr-2" />
               Services
             </a>
-            <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium flex items-center">
-              <Book className="h-5 w-5 mr-2" />
-              Resources
-            </a>
+            
             <a href="#" className="text-secondary-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
               <Book className="h-5 w-5 mr-2" />
               Blog

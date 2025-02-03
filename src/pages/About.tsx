@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { supabase } from "@/integrations/supabase/client"; // Import the Supabase client
 
 const About = () => {
   const [queryForm, setQueryForm] = useState({
@@ -11,13 +12,30 @@ const About = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Query Submitted",
-      description: "We'll get back to you soon!",
-    });
-    setQueryForm({ name: "", email: "", message: "" });
+
+    // Insert the form data into the Supabase table
+    const { data, error } = await supabase
+      .from("contact_queries") // Replace "messages" with your table name
+      .insert([
+        { name: queryForm.name, email: queryForm.email, message: queryForm.message },
+      ]);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: "There was an error submitting your message.",
+        variant: "destructive",
+      });
+      console.error("Error inserting data:", error);
+    } else {
+      toast({
+        title: "Query Submitted",
+        description: "We'll get back to you soon!",
+      });
+      setQueryForm({ name: "", email: "", message: "" });
+    }
   };
 
   return (
